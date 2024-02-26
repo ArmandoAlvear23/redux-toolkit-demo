@@ -1,6 +1,7 @@
 const store = require("./app/store");
 const cakeActions = require("./features/cake/cakeSlice").cakeActions;
 const cookieActions = require("./features/cookie/cookieSlice").cookieActions;
+const fetchUsers = require("./features/user/userSlice").fetchUsers;
 
 // Log initial state of redux store
 console.log("Initial state: ", store.getState());
@@ -11,14 +12,16 @@ const unsubscribe = store.subscribe(() => {
 });
 
 // Actions
-store.dispatch(cakeActions.ordered());
-store.dispatch(cakeActions.ordered());
-store.dispatch(cakeActions.ordered());
-store.dispatch(cakeActions.restocked(3));
-store.dispatch(cookieActions.restocked(5));
-store.dispatch(cookieActions.ordered());
-store.dispatch(cookieActions.ordered());
-store.dispatch(cookieActions.ordered());
+// store.dispatch(cakeActions.ordered());
+// store.dispatch(cakeActions.ordered());
+// store.dispatch(cakeActions.ordered());
+// store.dispatch(cakeActions.restocked(3));
+// store.dispatch(cookieActions.restocked(5));
+// store.dispatch(cookieActions.ordered());
+// store.dispatch(cookieActions.ordered());
+// store.dispatch(cookieActions.ordered());
+
+store.dispatch(fetchUsers());
 
 // Unsubscribe to store changes
-unsubscribe();
+//unsubscribe();
