@@ -6,7 +6,9 @@ const cookieActions = require("./features/cookie/cookieSlice").cookieActions;
 console.log("Initial state: ", store.getState());
 
 // Subscribe to store updates and log when there is an update
-const unsubscribe = store.subscribe(() => {});
+const unsubscribe = store.subscribe(() => {
+  console.log("Updated state: ", store.getState());
+});
 
 // Actions
 store.dispatch(cakeActions.ordered());
